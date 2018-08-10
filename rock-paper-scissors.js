@@ -1,15 +1,3 @@
-import other from './other';
-import {getMeUnique, sumNumbers} from './es6-unique-array';
-import {raceNumber, early, age} from './time-to-race';
-
-// other('Others,');
-// console.log(getMeUnique([1, 2, 3, 2, 4, 2, 1, 6]))
-// console.log(sumNumbers(1, 2, 3, 2, 4, 2, 1, 6))
-// console.log(age, raceNumber);
-
-
-//rock, paper, scissors game with a small cheat !
-
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput ==='bomb') {
@@ -72,7 +60,7 @@ const getUserChoice = userInput => {
   //console.log(determineWinner('scissors', 'paper'));
   
   function playGame() {
-    let userChoice = getUserChoice('bomb');
+    let userChoice = getUserChoice('bomb')
     let computerChoice = getComputerChoice();
     console.log(`You threw ${userChoice}`);
       console.log(`The computer threw ${computerChoice}`);
@@ -81,3 +69,9 @@ const getUserChoice = userInput => {
   playGame()
   
 
+  export {
+    getUserChoice,
+    getComputerChoice,
+    determineWinner,
+    playGame
+  }

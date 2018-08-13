@@ -1,3 +1,5 @@
+//rock, paper, scissors game with a small cheat !
+
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput ==='bomb') {
@@ -60,18 +62,15 @@ const getUserChoice = userInput => {
   //console.log(determineWinner('scissors', 'paper'));
   
   function playGame() {
-    let userChoice = getUserChoice('bomb')
+    let userChoice = getUserChoice('paper');
     let computerChoice = getComputerChoice();
     console.log(`You threw ${userChoice}`);
       console.log(`The computer threw ${computerChoice}`);
     console.log(determineWinner(userChoice, computerChoice));
   }
   playGame()
-  
 
-  export {
-    getUserChoice,
-    getComputerChoice,
-    determineWinner,
+
+export default {
     playGame
-  }
+}

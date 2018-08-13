@@ -1,83 +1,16 @@
 import other from './other';
 import {getMeUnique, sumNumbers} from './es6-unique-array';
-import {raceNumber, early, age} from './time-to-race';
+// import {raceNumber, early, age} from './time-to-race';
+// import playback from './rock-paper-scissors';
+import {storyWords, sentencesCount, reallyCount, veryCount, basicallyCount}from './linter';
 
 // other('Others,');
 // console.log(getMeUnique([1, 2, 3, 2, 4, 2, 1, 6]))
 // console.log(sumNumbers(1, 2, 3, 2, 4, 2, 1, 6))
 // console.log(age, raceNumber);
-
-
-//rock, paper, scissors game with a small cheat !
-
-const getUserChoice = userInput => {
-    userInput = userInput.toLowerCase();
-    if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput ==='bomb') {
-      return userInput;
-    }
-    else {
-      console.log('Error!')
-    }
-  }
-  
-  //console.log(getUserChoice('paper'));
-  //console.log(getUserChoice('fork'));
-  
-  const getComputerChoice = () => {
-    let randomNumber = Math.floor(Math.random() * 3);
-    
-    switch(randomNumber){
-      case 0:
-        return 'rock';
-      case 1:
-        return 'paper';
-      case 2:
-        return 'scissors';
-    }
-  }
-  
-  const determineWinner = (userChoice, computerChoice) => {
-    if(userChoice === 'bomb') {
-      return 'You won!';
-    }
-    if(userChoice === computerChoice){
-      return 'Game is a tie.';
-    }
-    if(userChoice === 'rock'){
-      if(computerChoice === 'paper'){
-        return 'Computer won!';
-      }
-      else{
-        return 'You won!';
-      }
-    }
-    if(userChoice === 'paper'){
-      if(computerChoice === 'scissors'){
-        return 'Computer won!';
-      }
-      else 'you won!';
-    }
-    if(userChoice === 'scissors'){
-      if(computerChoice === 'rock') {
-        return 'Computer won!';
-      }
-      else {
-        return 'You won!';
-      }
-    }
-  }
-  
-  //console.log(determineWinner('rock', 'paper'));
-  //console.log(determineWinner('paper', 'paper'));
-  //console.log(determineWinner('scissors', 'paper'));
-  
-  function playGame() {
-    let userChoice = getUserChoice('bomb');
-    let computerChoice = getComputerChoice();
-    console.log(`You threw ${userChoice}`);
-      console.log(`The computer threw ${computerChoice}`);
-    console.log(determineWinner(userChoice, computerChoice));
-  }
-  playGame()
-  
-
+// playback
+console.log("Word count: " + storyWords.length);
+console.log("Sentence count " + sentencesCount);
+console.log("really: " + reallyCount);
+console.log("very: " + veryCount);
+console.log("basically: " + basicallyCount);   

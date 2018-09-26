@@ -1,5 +1,5 @@
 // Created variable with the name myAge and is equal with the value 28
-const myAge = 50;
+const myAge = 30;
 //created a variable earlyEars will be equal by 2 and this variable will change
 let earlyYears = 2;
 earlyYears = 2 * 10.5
